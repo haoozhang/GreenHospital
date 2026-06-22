@@ -1,0 +1,81 @@
+{
+  "execution_time_seconds": 0,
+  "status": "success",
+  "analysis_method": "LLM",
+  "result": {
+    "evidence": [
+      "Scanned application source files for file & path security patterns"
+    ],
+    "values": [
+      {
+        "severity": "optional",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "description": "The product uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the product does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory.",
+        "category": "File & Path Security",
+        "storyPoint": 8,
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "status": "NOT_FOUND",
+        "id": "CWE-22"
+      },
+      {
+        "severity": "optional",
+        "name": "Relative Path Traversal",
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as .. that can resolve to a location that is outside of that directory.",
+        "category": "File & Path Security",
+        "storyPoint": 5,
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "status": "NOT_FOUND",
+        "id": "CWE-23"
+      },
+      {
+        "severity": "optional",
+        "name": "Absolute Path Traversal",
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as /abs/path that can resolve to a location that is outside of that directory.",
+        "category": "File & Path Security",
+        "storyPoint": 5,
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "status": "NOT_FOUND",
+        "id": "CWE-36"
+      },
+      {
+        "severity": "mandatory",
+        "name": "Unrestricted Upload of File with Dangerous Type",
+        "description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment.",
+        "category": "File & Path Security",
+        "storyPoint": 8,
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "status": "NOT_FOUND",
+        "id": "CWE-434"
+      },
+      {
+        "severity": "optional",
+        "name": "Improper Restriction of XML External Entity Reference",
+        "description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+        "category": "File & Path Security",
+        "storyPoint": 5,
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "status": "NOT_FOUND",
+        "id": "CWE-611"
+      }
+    ],
+    "finding": "Assessed 5 CWE rules in File & Path Security: 0 FOUND, 5 NOT_FOUND",
+    "confidence": "high"
+  },
+  "input_name": "CWE - File & Path Security",
+  "timestamp": "2026-06-22T10:01:02Z"
+}

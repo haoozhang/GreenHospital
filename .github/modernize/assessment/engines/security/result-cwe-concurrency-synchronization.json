@@ -1,0 +1,94 @@
+{
+  "result": {
+    "confidence": "high",
+    "values": [
+      {
+        "description": "The product uses the singleton pattern when creating a resource within a multithreaded environment.",
+        "category": "Concurrency & Synchronization",
+        "severity": "potential",
+        "name": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-543",
+        "storyPoint": 5,
+        "status": "NOT_FOUND"
+      },
+      {
+        "description": "The product does not properly synchronize shared data, such as static variables across threads, which can lead to undefined behavior and unpredictable data changes.",
+        "category": "Concurrency & Synchronization",
+        "severity": "potential",
+        "name": "Unsynchronized Access to Shared Data in a Multithreaded Context",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-567",
+        "storyPoint": 5,
+        "status": "NOT_FOUND"
+      },
+      {
+        "description": "The product utilizes multiple threads or processes to allow temporary access to a shared resource that can only be exclusive to one process at a time, but it does not properly synchronize these actions, which might cause simultaneous accesses of this resource by multiple threads or processes.",
+        "category": "Concurrency & Synchronization",
+        "severity": "potential",
+        "name": "Improper Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-662",
+        "storyPoint": 8,
+        "status": "NOT_FOUND"
+      },
+      {
+        "description": "The product does not properly acquire or release a lock on a resource, leading to unexpected resource state changes and behaviors.",
+        "category": "Concurrency & Synchronization",
+        "severity": "potential",
+        "name": "Improper Locking",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-667",
+        "storyPoint": 8,
+        "status": "NOT_FOUND"
+      },
+      {
+        "description": "The product utilizes a shared resource in a concurrent manner but does not attempt to synchronize access to the resource.",
+        "category": "Concurrency & Synchronization",
+        "severity": "potential",
+        "name": "Missing Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-820",
+        "storyPoint": 8,
+        "status": "NOT_FOUND"
+      },
+      {
+        "description": "The product utilizes a shared resource in a concurrent manner, but it does not correctly synchronize access to the resource.",
+        "category": "Concurrency & Synchronization",
+        "severity": "potential",
+        "name": "Incorrect Synchronization",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "id": "CWE-821",
+        "storyPoint": 8,
+        "status": "NOT_FOUND"
+      }
+    ],
+    "evidence": [
+      "Scanned application source files for concurrency & synchronization patterns. The project is an ASP.NET MVC application with no static shared mutable state, no custom thread management, no lock/Monitor/Mutex usage, and no singleton patterns with shared data. Static methods in BuisnessLogic.cs create local DbContext instances per invocation."
+    ],
+    "finding": "Assessed 6 CWE rules in Concurrency & Synchronization: 0 FOUND, 6 NOT_FOUND"
+  },
+  "input_name": "CWE - Concurrency & Synchronization",
+  "analysis_method": "LLM",
+  "execution_time_seconds": 0,
+  "status": "success",
+  "timestamp": "2026-06-22T10:04:53Z"
+}
