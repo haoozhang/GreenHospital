@@ -1,0 +1,117 @@
+{
+  "GeneratedAt": "2026-06-22T07:10:00.0000000Z",
+  "ProjectPath": ".",
+  "Summary": {
+    "TotalFindings": 10,
+    "CveCount": 5,
+    "CweCount": 5,
+    "BySeverity": { "mandatory": 5, "optional": 2, "potential": 3 },
+    "ByCategory": { "CVE": 5, "Code Quality": 2, "Credentials & Secrets": 3 },
+    "TotalRulesAssessed": 59,
+    "RulesPassed": 54
+  },
+  "CveFindings": [
+    {
+      "Id": "CVE-2021-21252",
+      "Name": "Regular Expression Denial of Service in jquery-validation",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2021-21252](https://github.com/advisories/GHSA-jxwx-85vp-gvwm): Regular Expression Denial of Service in jquery-validation\n\nSeverity: HIGH\n\nAffected dependencies:\n  - jQuery.Validation:1.11.1 (declared at packages.config:7) — vulnerable range: < 1.19.3\n\nRecommended fix:\n  - Upgrade jQuery.Validation to 1.19.3 or later",
+      "Files": ["packages.config:7"],
+      "Explanation": "[CVE-2021-21252](https://github.com/advisories/GHSA-jxwx-85vp-gvwm): Regular Expression Denial of Service in jquery-validation\n\nSeverity: HIGH\n\nAffected dependencies:\n  - jQuery.Validation:1.11.1 (declared at packages.config:7) — vulnerable range: < 1.19.3\n\nRecommended fix:\n  - Upgrade jQuery.Validation to 1.19.3 or later"
+    },
+    {
+      "Id": "CVE-2023-33170",
+      "Name": "Microsoft Security Advisory CVE-2023-33170: .NET Security Feature Bypass Vulnerability",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2023-33170](https://github.com/advisories/GHSA-25c8-p796-jg6r): .NET Security Feature Bypass Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.AspNet.Identity.Owin:2.1.0 (declared at packages.config:10) — vulnerable range: < 2.2.4\n\nRecommended fix:\n  - Upgrade Microsoft.AspNet.Identity.Owin to 2.2.4 or later",
+      "Files": ["packages.config:10"],
+      "Explanation": "[CVE-2023-33170](https://github.com/advisories/GHSA-25c8-p796-jg6r): .NET Security Feature Bypass Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.AspNet.Identity.Owin:2.1.0 (declared at packages.config:10) — vulnerable range: < 2.2.4\n\nRecommended fix:\n  - Upgrade Microsoft.AspNet.Identity.Owin to 2.2.4 or later"
+    },
+    {
+      "Id": "CVE-2022-29117",
+      "Name": ".NET Denial of Service Vulnerability",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2022-29117](https://github.com/advisories/GHSA-3rq8-h3gj-r5c6): .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.Owin:2.1.0 (declared at packages.config:16) — vulnerable range: < 4.2.2\n  - Microsoft.Owin.Security.Cookies:2.1.0 (declared at packages.config:19) — vulnerable range: < 4.2.2\n\nRecommended fix:\n  - Upgrade Microsoft.Owin to 4.2.2 or later\n  - Upgrade Microsoft.Owin.Security.Cookies to 4.2.2 or later",
+      "Files": ["packages.config:16", "packages.config:19"],
+      "Explanation": "[CVE-2022-29117](https://github.com/advisories/GHSA-3rq8-h3gj-r5c6): .NET Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.Owin:2.1.0 (declared at packages.config:16) — vulnerable range: < 4.2.2\n  - Microsoft.Owin.Security.Cookies:2.1.0 (declared at packages.config:19) — vulnerable range: < 4.2.2\n\nRecommended fix:\n  - Upgrade Microsoft.Owin to 4.2.2 or later\n  - Upgrade Microsoft.Owin.Security.Cookies to 4.2.2 or later"
+    },
+    {
+      "Id": "CVE-2020-1045",
+      "Name": "Cookie parsing failure",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2020-1045](https://github.com/advisories/GHSA-hxrm-9w7p-39cc): Cookie parsing failure in Microsoft.Owin\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.Owin:2.1.0 (declared at packages.config:16) — vulnerable range: < 4.1.1\n\nRecommended fix:\n  - Upgrade Microsoft.Owin to 4.1.1 or later",
+      "Files": ["packages.config:16"],
+      "Explanation": "[CVE-2020-1045](https://github.com/advisories/GHSA-hxrm-9w7p-39cc): Cookie parsing failure in Microsoft.Owin\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.Owin:2.1.0 (declared at packages.config:16) — vulnerable range: < 4.1.1\n\nRecommended fix:\n  - Upgrade Microsoft.Owin to 4.1.1 or later"
+    },
+    {
+      "Id": "CVE-2024-21907",
+      "Name": "Improper Handling of Exceptional Conditions in Newtonsoft.Json",
+      "Category": "CVE",
+      "Severity": "mandatory",
+      "StoryPoint": 1,
+      "Description": "[CVE-2024-21907](https://github.com/advisories/GHSA-5crp-9r3c-p9vr): Improper Handling of Exceptional Conditions in Newtonsoft.Json\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Newtonsoft.Json:5.0.6 (declared at packages.config:27) — vulnerable range: < 13.0.1\n\nRecommended fix:\n  - Upgrade Newtonsoft.Json to 13.0.1 or later",
+      "Files": ["packages.config:27"],
+      "Explanation": "[CVE-2024-21907](https://github.com/advisories/GHSA-5crp-9r3c-p9vr): Improper Handling of Exceptional Conditions in Newtonsoft.Json\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Newtonsoft.Json:5.0.6 (declared at packages.config:27) — vulnerable range: < 13.0.1\n\nRecommended fix:\n  - Upgrade Newtonsoft.Json to 13.0.1 or later"
+    }
+  ],
+  "CweFindings": [
+    {
+      "Id": "CWE-259",
+      "Name": "Use of Hard-coded Password",
+      "Category": "Credentials & Secrets",
+      "Severity": "optional",
+      "StoryPoint": 5,
+      "Description": "The product contains a hard-coded password, which it uses for its own inbound authentication or for outbound communication to external components.",
+      "Files": ["Migrations/Configuration.cs"],
+      "Explanation": "In Migrations/Configuration.cs, line 51, the seed method hard-codes the admin user password: idManager.CreateUser(newUser, \"12345678\"). This default admin credential is embedded directly in source code and will be seeded into the database on initialization."
+    },
+    {
+      "Id": "CWE-778",
+      "Name": "Insufficient Logging",
+      "Category": "Credentials & Secrets",
+      "Severity": "potential",
+      "StoryPoint": 3,
+      "Description": "When a security-critical event occurs, the product either does not record the event or omits important details about the event when logging it.",
+      "Files": ["Controllers/AccountController.cs"],
+      "Explanation": "No logging framework (ILogger, NLog, log4net, Serilog, EventLog, etc.) is used anywhere in the application. Security-critical events such as failed login attempts (AccountController.cs line 56: \"Invalid username or password.\") and authentication failures are handled via ModelState errors only, with no logging to any audit trail or log sink."
+    },
+    {
+      "Id": "CWE-798",
+      "Name": "Use of Hard-coded Credentials",
+      "Category": "Credentials & Secrets",
+      "Severity": "optional",
+      "StoryPoint": 5,
+      "Description": "The product contains hard-coded credentials, such as a password or cryptographic key.",
+      "Files": ["Migrations/Configuration.cs"],
+      "Explanation": "In Migrations/Configuration.cs, line 51, the seed method embeds the admin username (\"Admin\") and password (\"12345678\") as hard-coded credentials: idManager.CreateUser(newUser, \"12345678\"). These credentials are committed to source control and seeded into the database on startup."
+    },
+    {
+      "Id": "CWE-772",
+      "Name": "Missing Release of Resource after Effective Lifetime",
+      "Category": "Code Quality",
+      "Severity": "potential",
+      "StoryPoint": 3,
+      "Description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+      "Files": ["Models/BuisnessLogic.cs"],
+      "Explanation": "In BuisnessLogic.cs, HospitalDbContext instances are created locally (e.g., lines 16, 29, 41, 62) without a using statement or explicit Dispose() call. The DbContext (which holds database connections) is never released, causing resource leaks."
+    },
+    {
+      "Id": "CWE-1057",
+      "Name": "Data Access Operations Outside of Expected Data Manager Component",
+      "Category": "Code Quality",
+      "Severity": "potential",
+      "StoryPoint": 5,
+      "Description": "The product uses a dedicated, central data manager component as required by design, but it contains code that performs data-access operations that do not use this data manager.",
+      "Files": ["Models/BuisnessLogic.cs"],
+      "Explanation": "BuisnessLogic.cs (a business logic class) directly instantiates HospitalDbContext (lines 16, 29, 41, 62) to perform database operations, bypassing the controller-managed DbContext lifecycle. Data access in the business logic layer is performed outside the expected data manager (controller-level DbContext) component."
+    }
+  ]
+}
