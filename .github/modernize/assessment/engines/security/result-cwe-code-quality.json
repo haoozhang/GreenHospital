@@ -1,0 +1,241 @@
+{
+  "execution_time_seconds": 0,
+  "input_name": "CWE - Code Quality",
+  "timestamp": "2026-06-22T10:03:43Z",
+  "result": {
+    "confidence": "high",
+    "finding": "Assessed 16 CWE rules in Code Quality: 3 FOUND, 13 NOT_FOUND",
+    "evidence": [
+      "Scanned application source files for code quality patterns"
+    ],
+    "values": [
+      {
+        "description": "The product parses a formatted message or structure, but it does not handle or incorrectly handles a length field that is inconsistent with the actual length of the associated data.",
+        "storyPoint": 3,
+        "status": "NOT_FOUND",
+        "id": "CWE-130",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Improper Handling of Length Parameter Inconsistency"
+      },
+      {
+        "description": "The product does not initialize critical variables, which causes the execution environment to use unexpected values.",
+        "storyPoint": 2,
+        "status": "NOT_FOUND",
+        "id": "CWE-456",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Missing Initialization of a Variable"
+      },
+      {
+        "description": "The code uses a variable that has not been initialized, leading to unpredictable or unintended results.",
+        "storyPoint": 2,
+        "status": "NOT_FOUND",
+        "id": "CWE-457",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Use of Uninitialized Variable"
+      },
+      {
+        "description": "The code uses deprecated or obsolete functions, which suggests that the code has not been actively reviewed or maintained.",
+        "storyPoint": 1,
+        "status": "NOT_FOUND",
+        "id": "CWE-477",
+        "severity": "optional",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Use of Obsolete Function"
+      },
+      {
+        "description": "The product contains an expression that will always evaluate to false.",
+        "storyPoint": 1,
+        "status": "NOT_FOUND",
+        "id": "CWE-570",
+        "severity": "optional",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Expression is Always False"
+      },
+      {
+        "description": "The product contains an expression that will always evaluate to true.",
+        "storyPoint": 1,
+        "status": "NOT_FOUND",
+        "id": "CWE-571",
+        "severity": "optional",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Expression is Always True"
+      },
+      {
+        "description": "The product does not properly check inputs that are used for loop conditions, potentially leading to a denial of service or other consequences because of excessive looping.",
+        "storyPoint": 3,
+        "status": "NOT_FOUND",
+        "id": "CWE-606",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Unchecked Input for Loop Condition"
+      },
+      {
+        "description": "The product does not initialize or incorrectly initializes a resource, which might leave the resource in an unexpected state when it is accessed or used.",
+        "storyPoint": 3,
+        "status": "NOT_FOUND",
+        "id": "CWE-665",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Improper Initialization"
+      },
+      {
+        "description": "When converting from one data type to another, such as long to integer, data can be omitted or translated in a way that produces unexpected values. If the resulting values are used in a sensitive context, then dangerous behaviors may occur.",
+        "storyPoint": 3,
+        "status": "NOT_FOUND",
+        "id": "CWE-681",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Incorrect Conversion between Numeric Types"
+      },
+      {
+        "description": "The product performs a calculation that generates incorrect or unintended results that are later used in security-critical decisions or resource management.",
+        "storyPoint": 5,
+        "status": "NOT_FOUND",
+        "id": "CWE-682",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Incorrect Calculation"
+      },
+      {
+        "description": "The product does not release a resource after its effective lifetime has ended, i.e., after the resource is no longer needed.",
+        "storyPoint": 3,
+        "status": "FOUND",
+        "id": "CWE-772",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "Multiple HospitalDbContext instances are created as class fields or inline without being wrapped in using statements or try/finally blocks. In RegisteredUsersController, BuisnessLogic, and IdentityManager, DbContext instances are created directly in methods without guaranteed disposal if an exception occurs, risking resource leaks.",
+          "files": [
+            "Controllers/AdministrationController.cs",
+            "Controllers/AppointmentController.cs",
+            "Controllers/DoctorController.cs",
+            "Controllers/RegisteredUsersController.cs",
+            "Models/BuisnessLogic.cs",
+            "Models/IdentityManager.cs"
+          ]
+        },
+        "category": "Code Quality",
+        "name": "Missing Release of Resource after Effective Lifetime"
+      },
+      {
+        "description": "The product does not release a file descriptor or handle after its effective lifetime has ended, i.e., after the file descriptor/handle is no longer needed.",
+        "storyPoint": 3,
+        "status": "FOUND",
+        "id": "CWE-775",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "In HomeController, the DbContext (which implements IDisposable and manages database connection handles) is disposed via a Dispose() method override but is not wrapped in a using or try/finally block within action methods, meaning connection handles may not be released if an exception is thrown before Dispose is called.",
+          "files": [
+            "Controllers/HomeController.cs"
+          ]
+        },
+        "category": "Code Quality",
+        "name": "Missing Release of File Descriptor or Handle after Effective Lifetime"
+      },
+      {
+        "description": "The product uses an expression in which operator precedence causes incorrect logic to be used.",
+        "storyPoint": 1,
+        "status": "NOT_FOUND",
+        "id": "CWE-783",
+        "severity": "optional",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Operator Precedence Logic Error"
+      },
+      {
+        "description": "The product allocates memory based on an untrusted, large size value, but it does not ensure that the size is within expected limits, allowing arbitrary amounts of memory to be allocated.",
+        "storyPoint": 5,
+        "status": "NOT_FOUND",
+        "id": "CWE-789",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Memory Allocation with Excessive Size Value"
+      },
+      {
+        "description": "The product contains an iteration or loop with an exit condition that cannot be reached, i.e., an infinite loop.",
+        "storyPoint": 3,
+        "status": "NOT_FOUND",
+        "id": "CWE-835",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "",
+          "files": []
+        },
+        "category": "Code Quality",
+        "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+      },
+      {
+        "description": "The product uses a dedicated, central data manager component as required by design, but it contains code that performs data-access operations that do not use this data manager.",
+        "storyPoint": 5,
+        "status": "FOUND",
+        "id": "CWE-1057",
+        "severity": "potential",
+        "evidence": {
+          "explanation": "Controllers directly instantiate and query HospitalDbContext instead of going through a repository or service layer. AdministrationController, AppointmentController, DoctorController, HomeController, and RegisteredUsersController all perform direct LINQ queries against DbContext fields. BuisnessLogic and IdentityManager also directly access DbContext without an abstraction layer.",
+          "files": [
+            "Controllers/AdministrationController.cs",
+            "Controllers/AppointmentController.cs",
+            "Controllers/DoctorController.cs",
+            "Controllers/HomeController.cs",
+            "Controllers/RegisteredUsersController.cs",
+            "Models/BuisnessLogic.cs",
+            "Models/IdentityManager.cs"
+          ]
+        },
+        "category": "Code Quality",
+        "name": "Data Access Operations Outside of Expected Data Manager Component"
+      }
+    ]
+  },
+  "status": "success",
+  "analysis_method": "LLM"
+}
